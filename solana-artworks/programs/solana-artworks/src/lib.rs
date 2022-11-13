@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("63uptqg9z6XpNXxHdesENUZXzvR4G42pHFetqn7jENR7");
 
 #[program]
 pub mod solana_artworks {
@@ -15,14 +15,14 @@ pub mod solana_artworks {
 }
 
 #[derive(Accounts)]
-#[instruction(img_url: String)]
+#[instruction(img_url: String, title: String)]
 pub struct Initialize<'info> {
     #[account(
     init, 
-    seeds = [b"img_account", user.key().as_ref(), img_url.as_bytes()], 
+    seeds = [b"img_account", user.key().as_ref(), img_url.as_bytes(), title.as_bytes()], 
     bump, 
     payer = user, 
-    space = 8 + 32 + img_url.as_bytes().len() + 4)]
+    space = 8 + 32 + img_url.as_bytes().len() + 4 + title.as_bytes().len() + 4)]
     pub artwork_img: Account<'info, ArtworkImg>,
     #[account(mut)]
     pub user: Signer<'info>,

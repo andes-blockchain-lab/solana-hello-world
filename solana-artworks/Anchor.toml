@@ -1,13 +1,13 @@
 [features]
 seeds = false
-[programs.devnet]
-solana_artworks = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+[programs.localnet]
+solana_artworks = "63uptqg9z6XpNXxHdesENUZXzvR4G42pHFetqn7jENR7"
 
 [registry]
 url = "https://anchor.projectserum.com"
 
 [provider]
-cluster = "devnet"
+cluster = "localnet"
 wallet = "/home/usuario/.config/solana/id.json"
 
 [scripts]

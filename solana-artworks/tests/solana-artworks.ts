@@ -25,18 +25,20 @@ describe("solana-artworks", () => {
   it("Is initialized!", async () => {
 
     const imgUrl = "https://test.com";
+    const title = "Test"
 
     const [pda] = await PublicKey.findProgramAddress(
       [
         stringToBytes("img_account"),
         anchor.getProvider().wallet.publicKey.toBytes(),
         stringToBytes(imgUrl),
+        stringToBytes(title)
       ],
       program.programId
     );
 
     let tx = await program.methods
-      .initialize(imgUrl)
+      .initialize(imgUrl, title)
       .accounts({
         artworkImg: pda,
         user: anchor.getProvider().wallet.publicKey,

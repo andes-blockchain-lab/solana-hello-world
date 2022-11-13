@@ -56,7 +56,7 @@ export type SolanaArtworks = {
     }
   ];
   metadata: {
-    address: "HmWt22PngaizHcYPkybRZVnmuQW8bYroNJBLMzvQdXRV";
+    address: "63uptqg9z6XpNXxHdesENUZXzvR4G42pHFetqn7jENR7";
   };
 };
 
@@ -118,6 +118,6 @@ export const IDL: SolanaArtworks = {
     },
   ],
   metadata: {
-    address: "HmWt22PngaizHcYPkybRZVnmuQW8bYroNJBLMzvQdXRV",
+    address: "63uptqg9z6XpNXxHdesENUZXzvR4G42pHFetqn7jENR7",
   },
 };
